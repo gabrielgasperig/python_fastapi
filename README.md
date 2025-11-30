@@ -74,12 +74,14 @@ Faça uma requisição GET para a rota de API:
 
 **Exemplo de Resposta (JSON):**
 
+```bash
 {
   "titulo": "Batman",
   "ano": "1989",
   "sinopse": "The Dark Knight of Gotham City begins his war on crime...",
   "poster": "[https://m.media-amazon.com/images/](https://m.media-amazon.com/images/)..."
 }
+```
 
 ### 3. Documentação Automática (Swagger UI)
 O FastAPI gera documentação automática e interativa. 
