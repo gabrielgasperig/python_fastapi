@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buscador de Filmes</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-900 text-white min-h-screen flex flex-col items-center py-10">
+
+    <div class="w-full max-w-md bg-gray-800 p-8 rounded-lg shadow-lg">
+        <h1 class="text-3xl font-bold mb-6 text-center text-yellow-500">🎬 CineBusca</h1>
+        
+        <form action="/" method="post" class="flex gap-2 mb-6">
+            <input type="text" name="nome_filme" placeholder="Nome do filme (ex: Batman)" required
+                   class="flex-1 p-2 rounded text-black focus:outline-none focus:ring-2 focus:ring-yellow-500">
+            <button type="submit" 
+                    class="bg-yellow-500 hover:bg-yellow-600 text-black font-bold py-2 px-4 rounded transition">
+                Buscar
+            </button>
+        </form>
+
+        {% if erro %}
+            <div class="bg-red-500 text-white p-3 rounded mb-4 text-center">
+                {{ erro }}
+            </div>
+        {% endif %}
+
+        {% if filme %}
+            <div class="bg-gray-700 p-4 rounded-lg animate-fade-in-up">
+                {% if filme.poster != "N/A" %}
+                    <img src="{{ filme.poster }}" alt="Poster" class="w-full rounded mb-4 shadow-md">
+                {% else %}
+                    <div class="w-full h-64 bg-gray-600 flex items-center justify-center mb-4 rounded">
+                        <span class="text-gray-400">Sem Pôster</span>
+                    </div>
+                {% endif %}
+                
+                <h2 class="text-2xl font-bold mb-1">{{ filme.titulo }}</h2>
+                <span class="inline-block bg-yellow-500 text-black text-xs px-2 py-1 rounded font-bold mb-3">
+                    {{ filme.ano }}
+                </span>
+                <p class="text-gray-300 text-sm leading-relaxed">
+                    {{ filme.sinopse }}
+                </p>
+            </div>
+        {% endif %}
+    </div>
+
+</body>
+</html>
