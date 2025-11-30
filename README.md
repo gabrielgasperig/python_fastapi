@@ -2,7 +2,7 @@
 
 Projeto desenvolvido como requisito avaliativo para a disciplina de **Introdução à Programação em Python** no curso de **Sistemas para Internet** (UNIVALI).
 
-O sistema consiste em uma aplicação web híbrida que consome a API pública da OMDb (Open Movie Database). Ele oferece tanto uma **Interface Gráfica** amigável para o usuário final quanto uma **API REST** estruturada para integrações.
+O sistema consiste em uma aplicação web híbrida que consome a API pública da OMDb (Open Movie Database).
 
 ---
 
