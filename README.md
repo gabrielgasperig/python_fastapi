@@ -22,15 +22,32 @@ O sistema consiste em uma aplicação web híbrida que consome a API pública da
 
 Siga os passos abaixo para rodar o projeto localmente.
 
-### 1. Instale as dependências
+### 1. Crie e ative o ambiente virtual (Recomendado)
 
-Certifique-se de estar na pasta do projeto e execute:
+O uso de um ambiente virtual (`venv`) é importante para isolar as dependências do projeto.
+
+**No Windows:**
+```bash
+py -m venv venv
+./venv/Scripts/activate
+```
+
+**No Linux:**
+```bash
+python -m venv venv
+source venv/bin/activate
+```
+Após ativar, você deverá ver (venv) no início da linha do seu terminal.
+
+### 2. Instale as dependências
+
+Com o ambiente virtual ativo, certifique-se de estar na pasta do projeto e execute:
 
 ```bash
 pip install -r requirements.txt
 ```
 
-### 2. Configuração da Chave de API (Importante!)
+### 3. Configuração da Chave de API (Importante!)
 
 Este projeto utiliza variáveis de ambiente para segurança. Você precisa de uma chave gratuita da [OMDb API](http://www.omdbapi.com/apikey.aspx).
 
